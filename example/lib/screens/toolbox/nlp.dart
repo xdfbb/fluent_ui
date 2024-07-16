@@ -198,10 +198,6 @@ class _NlpPageState extends State<NlpPage> with PageMixin {
   }
 
   Future<void> callOpenAIVision() async {
-    final String openAIkey = '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';
-
-    // export OPENAI_API_KEY=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
-    // export OPENAI_API_ORG=org-WhuzIDANHL0HnQvnBhOZUFRp
 
     Map<String, String> headers = {
       'Content-Type': 'application/json',

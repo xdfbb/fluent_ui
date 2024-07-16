@@ -1,0 +1,785 @@
+{
+  "words_result": {
+    "CommonData": [
+      {
+        "word_name": "性别",
+        "word": "男"
+      },
+      {
+        "word_name": "年龄",
+        "word": "40"
+      },
+      {
+        "word_name": "姓名",
+        "word": "张某某"
+      },
+      {
+        "word_name": "时间",
+        "word": "202261"
+      },
+      {
+        "word_name": "标本情况",
+        "word": ""
+      },
+      {
+        "word_name": "临床症状",
+        "word": ""
+      },
+      {
+        "word_name": "临床诊断",
+        "word": ""
+      },
+      {
+        "word_name": "建议",
+        "word": ""
+      },
+      {
+        "word_name": "标本种类",
+        "word": ""
+      },
+      {
+        "word_name": "科室",
+        "word": ""
+      },
+      {
+        "word_name": "检查结果",
+        "word": ""
+      },
+      {
+        "word_name": "报告单名称",
+        "word": ""
+      },
+      {
+        "word_name": "检查目的",
+        "word": ""
+      },
+      {
+        "word_name": "检查项目",
+        "word": ""
+      },
+      {
+        "word_name": "医院",
+        "word": ""
+      }
+    ],
+    "Item": [
+      [
+        {
+          "word_name": "仪器类型",
+          "word": ""
+        },
+        {
+          "word_name": "单位",
+          "word": "10^16/L"
+        },
+        {
+          "word_name": "参考区间",
+          "word": "0-8"
+        },
+        {
+          "word_name": "测试方法",
+          "word": ""
+        },
+        {
+          "word_name": "结果",
+          "word": ""
+        },
+        {
+          "word_name": "结果提示",
+          "word": ""
+        },
+        {
+          "word_name": "项目代号",
+          "word": ""
+        },
+        {
+          "word_name": "项目名称",
+          "word": ""
+        }
+      ],
+      [
+        {
+          "word_name": "仪器类型",
+          "word": ""
+        },
+        {
+          "word_name": "单位",
+          "word": ""
+        },
+        {
+          "word_name": "参考区间",
+          "word": "阴性"
+        },
+        {
+          "word_name": "测试方法",
+          "word": ""
+        },
+        {
+          "word_name": "结果",
+          "word": ""
+        },
+        {
+          "word_name": "结果提示",
+          "word": ""
+        },
+        {
+          "word_name": "项目代号",
+          "word": ""
+        },
+        {
+          "word_name": "项目名称",
+          "word": ""
+        }
+      ],
+      [
+        {
+          "word_name": "仪器类型",
+          "word": ""
+        },
+        {
+          "word_name": "单位",
+          "word": ""
+        },
+        {
+          "word_name": "参考区间",
+          "word": "无色水样液体"
+        },
+        {
+          "word_name": "测试方法",
+          "word": ""
+        },
+        {
+          "word_name": "结果",
+          "word": "清洗透明"
+        },
+        {
+          "word_name": "结果提示",
+          "word": ""
+        },
+        {
+          "word_name": "项目代号",
+          "word": ""
+        },
+        {
+          "word_name": "项目名称",
+          "word": ""
+        }
+      ],
+      [
+        {
+          "word_name": "仪器类型",
+          "word": ""
+        },
+        {
+          "word_name": "单位",
+          "word": ""
+        },
+        {
+          "word_name": "参考区间",
+          "word": "清洗透明"
+        },
+        {
+          "word_name": "测试方法",
+          "word": ""
+        },
+        {
+          "word_name": "结果",
+          "word": "清洗透明"
+        },
+        {
+          "word_name": "结果提示",
+          "word": ""
+        },
+        {
+          "word_name": "项目代号",
+          "word": ""
+        },
+        {
+          "word_name": "项目名称",
+          "word": ""
+        }
+      ],
+      [
+        {
+          "word_name": "仪器类型",
+          "word": ""
+        },
+        {
+          "word_name": "单位",
+          "word": ""
+        },
+        {
+          "word_name": "参考区间",
+          "word": ""
+        },
+        {
+          "word_name": "测试方法",
+          "word": ""
+        },
+        {
+          "word_name": "结果",
+          "word": ""
+        },
+        {
+          "word_name": "结果提示",
+          "word": ""
+        },
+        {
+          "word_name": "项目代号",
+          "word": ""
+        },
+        {
+          "word_name": "项目名称",
+          "word": ""
+        }
+      ],
+      [
+        {
+          "word_name": "仪器类型",
+          "word": ""
+        },
+        {
+          "word_name": "单位",
+          "word": "mmol/L"
+        },
+        {
+          "word_name": "参考区间",
+          "word": "0.91~2.07mmol/L"
+        },
+        {
+          "word_name": "测试方法",
+          "word": ""
+        },
+        {
+          "word_name": "结果",
+          "word": "1.7"
+        },
+        {
+          "word_name": "结果提示",
+          "word": ""
+        },
+        {
+          "word_name": "项目代号",
+          "word": ""
+        },
+        {
+          "word_name": "项目名称",
+          "word": "高密度脂蛋白胆固醇"
+        }
+      ],
+      [
+        {
+          "word_name": "仪器类型",
+          "word": ""
+        },
+        {
+          "word_name": "单位",
+          "word": "μmol/L"
+        },
+        {
+          "word_name": "参考区间",
+          "word": "0.00~10.00μmol/L"
+        },
+        {
+          "word_name": "测试方法",
+          "word": ""
+        },
+        {
+          "word_name": "结果",
+          "word": "4.3"
+        },
+        {
+          "word_name": "结果提示",
+          "word": ""
+        },
+        {
+          "word_name": "项目代号",
+          "word": ""
+        },
+        {
+          "word_name": "项目名称",
+          "word": "总胆汁酸"
+        }
+      ],
+      [
+        {
+          "word_name": "仪器类型",
+          "word": ""
+        },
+        {
+          "word_name": "单位",
+          "word": "g/L"
+        },
+        {
+          "word_name": "参考区间",
+          "word": "含蛋白量0.00~25.00g/L"
+        },
+        {
+          "word_name": "测试方法",
+          "word": ""
+        },
+        {
+          "word_name": "结果",
+          "word": "10.7"
+        },
+        {
+          "word_name": "结果提示",
+          "word": ""
+        },
+        {
+          "word_name": "项目代号",
+          "word": ""
+        },
+        {
+          "word_name": "项目名称",
+          "word": "胸腹水生化"
+        }
+      ],
+      [
+        {
+          "word_name": "仪器类型",
+          "word": ""
+        },
+        {
+          "word_name": "单位",
+          "word": "μmol/L"
+        },
+        {
+          "word_name": "参考区间",
+          "word": "0.00~6.84μmol/L"
+        },
+        {
+          "word_name": "测试方法",
+          "word": ""
+        },
+        {
+          "word_name": "结果",
+          "word": "2.7"
+        },
+        {
+          "word_name": "结果提示",
+          "word": ""
+        },
+        {
+          "word_name": "项目代号",
+          "word": ""
+        },
+        {
+          "word_name": "项目名称",
+          "word": "直接胆红素"
+        }
+      ],
+      [
+        {
+          "word_name": "仪器类型",
+          "word": ""
+        },
+        {
+          "word_name": "单位",
+          "word": "U/L"
+        },
+        {
+          "word_name": "参考区间",
+          "word": "95.00~250.00U/L"
+        },
+        {
+          "word_name": "测试方法",
+          "word": ""
+        },
+        {
+          "word_name": "结果",
+          "word": "203.2"
+        },
+        {
+          "word_name": "结果提示",
+          "word": ""
+        },
+        {
+          "word_name": "项目代号",
+          "word": ""
+        },
+        {
+          "word_name": "项目名称",
+          "word": "α-羟丁酸脱氢酶"
+        }
+      ],
+      [
+        {
+          "word_name": "仪器类型",
+          "word": ""
+        },
+        {
+          "word_name": "单位",
+          "word": "mmol/L"
+        },
+        {
+          "word_name": "参考区间",
+          "word": "20.00~220.00mmol/L"
+        },
+        {
+          "word_name": "测试方法",
+          "word": ""
+        },
+        {
+          "word_name": "结果",
+          "word": "152.7"
+        },
+        {
+          "word_name": "结果提示",
+          "word": ""
+        },
+        {
+          "word_name": "项目代号",
+          "word": ""
+        },
+        {
+          "word_name": "项目名称",
+          "word": "血淀粉酶"
+        }
+      ],
+      [
+        {
+          "word_name": "仪器类型",
+          "word": ""
+        },
+        {
+          "word_name": "单位",
+          "word": "mmol/L"
+        },
+        {
+          "word_name": "参考区间",
+          "word": "96.00~108.00mmol/L"
+        },
+        {
+          "word_name": "测试方法",
+          "word": ""
+        },
+        {
+          "word_name": "结果",
+          "word": "89.0"
+        },
+        {
+          "word_name": "结果提示",
+          "word": "↓"
+        },
+        {
+          "word_name": "项目代号",
+          "word": ""
+        },
+        {
+          "word_name": "项目名称",
+          "word": "氯"
+        }
+      ],
+      [
+        {
+          "word_name": "仪器类型",
+          "word": ""
+        },
+        {
+          "word_name": "单位",
+          "word": "mmol/L"
+        },
+        {
+          "word_name": "参考区间",
+          "word": "25.00~32.00mmol/L"
+        },
+        {
+          "word_name": "测试方法",
+          "word": ""
+        },
+        {
+          "word_name": "结果",
+          "word": "25.1"
+        },
+        {
+          "word_name": "结果提示",
+          "word": ""
+        },
+        {
+          "word_name": "项目代号",
+          "word": ""
+        },
+        {
+          "word_name": "项目名称",
+          "word": "总二氧化碳"
+        }
+      ],
+      [
+        {
+          "word_name": "仪器类型",
+          "word": ""
+        },
+        {
+          "word_name": "单位",
+          "word": "mmol/L"
+        },
+        {
+          "word_name": "参考区间",
+          "word": "3.10~5.70mmol/L"
+        },
+        {
+          "word_name": "测试方法",
+          "word": ""
+        },
+        {
+          "word_name": "结果",
+          "word": "2.6"
+        },
+        {
+          "word_name": "结果提示",
+          "word": "↓"
+        },
+        {
+          "word_name": "项目代号",
+          "word": ""
+        },
+        {
+          "word_name": "项目名称",
+          "word": "总胆固醇"
+        }
+      ],
+      [
+        {
+          "word_name": "仪器类型",
+          "word": ""
+        },
+        {
+          "word_name": "单位",
+          "word": ""
+        },
+        {
+          "word_name": "参考区间",
+          "word": "结果阴性"
+        },
+        {
+          "word_name": "测试方法",
+          "word": ""
+        },
+        {
+          "word_name": "结果",
+          "word": "阳性"
+        },
+        {
+          "word_name": "结果提示",
+          "word": ""
+        },
+        {
+          "word_name": "项目代号",
+          "word": ""
+        },
+        {
+          "word_name": "项目名称",
+          "word": "尿胰蛋白酶原-2"
+        }
+      ],
+      [
+        {
+          "word_name": "仪器类型",
+          "word": ""
+        },
+        {
+          "word_name": "单位",
+          "word": ""
+        },
+        {
+          "word_name": "参考区间",
+          "word": ""
+        },
+        {
+          "word_name": "测试方法",
+          "word": ""
+        },
+        {
+          "word_name": "结果",
+          "word": "活动开始记者"
+        },
+        {
+          "word_name": "结果提示",
+          "word": ""
+        },
+        {
+          "word_name": "项目代号",
+          "word": ""
+        },
+        {
+          "word_name": "项目名称",
+          "word": "检查小结"
+        }
+      ],
+      [
+        {
+          "word_name": "仪器类型",
+          "word": ""
+        },
+        {
+          "word_name": "单位",
+          "word": ""
+        },
+        {
+          "word_name": "参考区间",
+          "word": ""
+        },
+        {
+          "word_name": "测试方法",
+          "word": ""
+        },
+        {
+          "word_name": "结果",
+          "word": ""
+        },
+        {
+          "word_name": "结果提示",
+          "word": ""
+        },
+        {
+          "word_name": "项目代号",
+          "word": ""
+        },
+        {
+          "word_name": "项目名称",
+          "word": ""
+        }
+      ],
+      [
+        {
+          "word_name": "仪器类型",
+          "word": ""
+        },
+        {
+          "word_name": "单位",
+          "word": "mg/dL"
+        },
+        {
+          "word_name": "参考区间",
+          "word": ""
+        },
+        {
+          "word_name": "测试方法",
+          "word": ""
+        },
+        {
+          "word_name": "结果",
+          "word": "222.0"
+        },
+        {
+          "word_name": "结果提示",
+          "word": ""
+        },
+        {
+          "word_name": "项目代号",
+          "word": ""
+        },
+        {
+          "word_name": "项目名称",
+          "word": "纤维蛋白原"
+        }
+      ],
+      [
+        {
+          "word_name": "仪器类型",
+          "word": ""
+        },
+        {
+          "word_name": "单位",
+          "word": ""
+        },
+        {
+          "word_name": "参考区间",
+          "word": ""
+        },
+        {
+          "word_name": "测试方法",
+          "word": ""
+        },
+        {
+          "word_name": "结果",
+          "word": "35.5"
+        },
+        {
+          "word_name": "结果提示",
+          "word": ""
+        },
+        {
+          "word_name": "项目代号",
+          "word": ""
+        },
+        {
+          "word_name": "项目名称",
+          "word": "活化部分凝血活酶时间"
+        }
+      ],
+      [
+        {
+          "word_name": "仪器类型",
+          "word": ""
+        },
+        {
+          "word_name": "单位",
+          "word": ""
+        },
+        {
+          "word_name": "参考区间",
+          "word": ""
+        },
+        {
+          "word_name": "测试方法",
+          "word": ""
+        },
+        {
+          "word_name": "结果",
+          "word": "mg/dL"
+        },
+        {
+          "word_name": "结果提示",
+          "word": ""
+        },
+        {
+          "word_name": "项目代号",
+          "word": ""
+        },
+        {
+          "word_name": "项目名称",
+          "word": "凝血酶原时间"
+        }
+      ],
+      [
+        {
+          "word_name": "仪器类型",
+          "word": ""
+        },
+        {
+          "word_name": "单位",
+          "word": ""
+        },
+        {
+          "word_name": "参考区间",
+          "word": ""
+        },
+        {
+          "word_name": "测试方法",
+          "word": ""
+        },
+        {
+          "word_name": "结果",
+          "word": ""
+        },
+        {
+          "word_name": "结果提示",
+          "word": ""
+        },
+        {
+          "word_name": "项目代号",
+          "word": ""
+        },
+        {
+          "word_name": "项目名称",
+          "word": "检查小结"
+        }
+      ]
+    ]
+  },
+  "Item_row_num": 21,
+  "CommonData_result_num": 15,
+  "log_id": "1721896358414303509"
+}

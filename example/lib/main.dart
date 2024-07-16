@@ -1,13 +1,18 @@
+import 'dart:io';
+
 import 'package:example/screens/home.dart';
 import 'package:example/screens/settings.dart';
 import 'package:fluent_ui/fluent_ui.dart' hide Page;
 import 'package:flutter/foundation.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_acrylic/flutter_acrylic.dart' as flutter_acrylic;
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 import 'package:system_theme/system_theme.dart';
 import 'package:url_launcher/link.dart';
 import 'package:window_manager/window_manager.dart';
+import 'package:sqflite/sqflite.dart';
+import 'package:path/path.dart' as flutter_path;
 
 import 'routes/forms.dart' deferred as forms;
 import 'routes/inputs.dart' deferred as inputs;
@@ -15,10 +20,12 @@ import 'routes/navigation.dart' deferred as navigation;
 import 'routes/popups.dart' deferred as popups;
 import 'routes/surfaces.dart' deferred as surfaces;
 import 'routes/theming.dart' deferred as theming;
+import 'routes/toolbox.dart' deferred as toolbox;
+
 import 'theme.dart';
 import 'widgets/deferred_widget.dart';
 
-const String appTitle = 'Win UI for Flutter';
+const String appTitle = 'Steven\'s toolbox';
 
 /// Checks if the current environment is a desktop environment.
 bool get isDesktop {
@@ -32,6 +39,27 @@ bool get isDesktop {
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  var databasesPath = await getDatabasesPath();
+  var path = flutter_path.join(databasesPath, "toolbox_db.db");
+  // only delete on debug mode
+  // await deleteDatabase(path);
+
+  // Check if the database exists
+  var exists = await databaseExists(path);
+  if (!exists) {
+    // Should happen only the first time you launch your application
+    print("Creating new DB for first time use");
+    // Make sure the parent directory exists
+    try {
+      await Directory(flutter_path.dirname(path)).create(recursive: true);
+    } catch (_) {}
+
+    var db = await openDatabase(path,
+        version: 1, onCreate: _onCreate, onUpgrade: _onUpgrade, onDowngrade: onDatabaseDowngradeDelete);
+  } else {
+    print("Opening existing database");
+  }
 
   // if it's not on the web, windows or android, load the accent color
   if (!kIsWeb &&
@@ -109,10 +137,8 @@ class MyApp extends StatelessWidget {
               textDirection: appTheme.textDirection,
               child: NavigationPaneTheme(
                 data: NavigationPaneThemeData(
-                  backgroundColor: appTheme.windowEffect !=
-                          flutter_acrylic.WindowEffect.disabled
-                      ? Colors.transparent
-                      : null,
+                  backgroundColor:
+                      appTheme.windowEffect != flutter_acrylic.WindowEffect.disabled ? Colors.transparent : null,
                 ),
                 child: child!,
               ),
@@ -156,6 +182,19 @@ class _MyHomePageState extends State<MyHomePage> with WindowListener {
       key: const ValueKey('/'),
       icon: const Icon(FluentIcons.home),
       title: const Text('Home'),
+      body: const SizedBox.shrink(),
+    ),
+    PaneItemHeader(header: const Text('Toolbox')),
+    PaneItem(
+      key: const ValueKey('/toolbox/ocr'),
+      icon: const Icon(FluentIcons.generic_scan),
+      title: const Text('OCR'),
+      body: const SizedBox.shrink(),
+    ),
+    PaneItem(
+      key: const ValueKey('/toolbox/nlp'),
+      icon: const Icon(FluentIcons.generic_scan),
+      title: const Text('NLP'),
       body: const SizedBox.shrink(),
     ),
     PaneItemHeader(header: const Text('Inputs')),
@@ -402,10 +441,8 @@ class _MyHomePageState extends State<MyHomePage> with WindowListener {
 
   int _calculateSelectedIndex(BuildContext context) {
     final location = GoRouterState.of(context).uri.toString();
-    int indexOriginal = originalItems
-        .where((item) => item.key != null)
-        .toList()
-        .indexWhere((item) => item.key == Key(location));
+    int indexOriginal =
+        originalItems.where((item) => item.key != null).toList().indexWhere((item) => item.key == Key(location));
 
     if (indexOriginal == -1) {
       int indexFooter = footerItems
@@ -415,11 +452,7 @@ class _MyHomePageState extends State<MyHomePage> with WindowListener {
       if (indexFooter == -1) {
         return 0;
       }
-      return originalItems
-              .where((element) => element.key != null)
-              .toList()
-              .length +
-          indexFooter;
+      return originalItems.where((element) => element.key != null).toList().length + indexFooter;
     } else {
       return indexOriginal;
     }
@@ -514,8 +547,7 @@ class _MyHomePageState extends State<MyHomePage> with WindowListener {
         ]),
       ),
       paneBodyBuilder: (item, child) {
-        final name =
-            item?.key is ValueKey ? (item!.key as ValueKey).value : null;
+        final name = item?.key is ValueKey ? (item!.key as ValueKey).value : null;
         return FocusTraversalGroup(
           key: ValueKey('body$name'),
           child: widget.child,
@@ -717,6 +749,25 @@ final router = GoRouter(navigatorKey: rootNavigatorKey, routes: [
 
       /// Settings
       GoRoute(path: '/settings', builder: (context, state) => const Settings()),
+
+      /// /// Toolbox
+      /// NLP
+      GoRoute(
+        path: '/toolbox/nlp',
+        builder: (context, state) => DeferredWidget(
+          toolbox.loadLibrary,
+          () => toolbox.NlpPage(),
+        ),
+      ),
+
+      /// NLP
+      GoRoute(
+        path: '/toolbox/ocr',
+        builder: (context, state) => DeferredWidget(
+          toolbox.loadLibrary,
+          () => toolbox.OcrPage(),
+        ),
+      ),
 
       /// /// Input
       /// Buttons
@@ -984,3 +1035,40 @@ final router = GoRouter(navigatorKey: rootNavigatorKey, routes: [
     ],
   ),
 ]);
+
+/// Check if a file is a valid database file
+///
+/// An empty file is a valid empty sqlite file
+Future<bool> isDatabase(String path) async {
+  Database? db;
+  bool isDatabase = false;
+  try {
+    db = await openReadOnlyDatabase(path);
+    int version = await db.getVersion();
+    if (version != null) {
+      isDatabase = true;
+    }
+  } catch (_) {
+  } finally {
+    await db!.close();
+  }
+  return isDatabase;
+}
+
+_onCreate(Database db, int version) async {
+  // Database is created, create the table
+  await db.execute("CREATE TABLE Record (id INTEGER PRIMARY KEY AUTOINCREMENT, type TEXT, string_id TEXT, content "
+      "TEXT, "
+      "string_value "
+      "TEXT, vision_response TEXT, medical_response TEXT, uw_response TEXT, bin_value BLOB)");
+}
+
+_onUpgrade(Database db, int oldVersion, int newVersion) async {
+  // Database version is updated, alter the table
+  // await db.execute("ALTER TABLE Test ADD name TEXT");
+}
+
+_onOpen(Database db) async {
+  // Database is open, print its version
+  print('db version ${await db.getVersion()}');
+}
